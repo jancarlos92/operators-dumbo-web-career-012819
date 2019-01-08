@@ -17,7 +17,7 @@ describe "Operations" do
       answer = unsafe?(50)
       expect(answer).to eq("safe")
     end
-  end
+ 
 
   describe "#not_safe?" do
     it 'returns true if speed is greater than 60' do
@@ -40,6 +40,6 @@ describe "Operations" do
       match = methods.last
       expect(match).to include("?")
     end
-  end
+ 
   
 end
