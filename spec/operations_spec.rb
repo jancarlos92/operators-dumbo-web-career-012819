@@ -5,34 +5,34 @@ describe "Operations" do
   describe "#unsafe?" do
     it 'returns true if speed is greater than 60' do
       answer = unsafe?(79)
-      expect(answer).to eq(true)
+      expect(answer).to eq("unsafe")
     end
 
     it 'returns true if speed is less than 40' do
       answer = unsafe?(35)
-      expect(answer).to eq(true)
+      expect(answer).to eq("unsafe")
     end
 
     it 'returns false if the speed is between 40 and 60' do
       answer = unsafe?(50)
-      expect(answer).to eq(false)
+      expect(answer).to eq("safe")
     end
   end
 
   describe "#not_safe?" do
     it 'returns true if speed is greater than 60' do
       answer = not_safe?(79)
-      expect(answer).to eq(true)
+      expect(answer).to eq("not safe")
     end
 
     it 'returns true if speed is less than 40' do
       answer = not_safe?(35)
-      expect(answer).to eq(true)
+      expect(answer).to eq("not safe")
     end
 
     it 'returns false if the speed is between 40 and 60' do
       answer = not_safe?(50)
-      expect(answer).to eq(false)
+      expect(answer).to eq("safe")
     end
 
     it 'uses the ternary operator' do
